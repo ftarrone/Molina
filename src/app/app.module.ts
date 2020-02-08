@@ -7,6 +7,7 @@ import { HeaderComponent} from './header/header.component';
 import { ModuloDeRotasConfiguradas } from './app.routes';
 import { CmailCadastroComponent } from './modules/cadastro/cadastro.component';
 import { InboxComponent } from './modules/inbox/inbox.component';
+import { FormGroupComponent } from './component/cmail-form-group.component';
 
 
 @NgModule({
@@ -14,7 +15,9 @@ import { InboxComponent } from './modules/inbox/inbox.component';
     AppComponent,
     HeaderComponent,
     CmailCadastroComponent,
-    InboxComponent
+    InboxComponent,
+    FormGroupComponent
+    
 
   ],
   imports: [
