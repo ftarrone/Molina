@@ -5,14 +5,17 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeaderComponent} from './header/header.component';
 import { ModuloDeRotasConfiguradas } from './app.routes';
-import { CmailCadastroComponent } from './pages/cadastro/cadastro.component';
+import { CmailCadastroComponent } from './modules/cadastro/cadastro.component';
+import { InboxComponent } from './modules/inbox/inbox.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    CmailCadastroComponent
+    CmailCadastroComponent,
+    InboxComponent
+
   ],
   imports: [
     BrowserModule,
@@ -22,4 +25,5 @@ import { CmailCadastroComponent } from './pages/cadastro/cadastro.component';
   providers: [],  
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
