@@ -15,7 +15,10 @@
             </button>
     
             <!-- newEmail--active -->
-            <form (submit)="hsndleSubmitOfNewEmail($event)" class="newEmail cmailForm"
+            <form 
+            #formEmail="ngForm"
+            (ngSubmit)="hsndleSubmitOfNewEmail(formEmail)"
+            class="newEmail cmailForm"
                [ngClass]="{'newEmail--active':IsNewEmailOpen}">
               <div class="newEmail__card demo-card-wide mdl-card mdl-shadow--2dp">
                 <div class="newEmail__titleArea mdl-card__title">

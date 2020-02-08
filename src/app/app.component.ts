@@ -2,7 +2,8 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+ // templateUrl: './app.component.html',
+ template: '<router-outlet> </router-outlet>',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
@@ -16,9 +17,9 @@ export class AppComponent {
   ];
 
   novoEmail = {
-    assunto : 'Mano ola que Show!',
-    conteudo :'Alo Alo',
-    para:'fernando.t.molina@123.com'
+    assunto : '',
+    conteudo :'',
+    para:''
   }
 
 
@@ -26,10 +27,13 @@ export class AppComponent {
     this.IsNewEmailOpen = !this.IsNewEmailOpen
 }
 
-hsndleSubmitOfNewEmail (){
+hsndleSubmitOfNewEmail (formEmail){
 
-  event.preventDefault();
-  console.log('this.novoEmail',this.novoEmail);
+  if (formEmail.invalid) {
+    return  false;
+  }
+
+
   this.emails.push(this.novoEmail);
   this.novoEmail = { 
     assunto:  '',
