@@ -11,3 +11,4 @@ const rotas : Routes = [
 export const ModuloDeRotasConfiguradas = RouterModule.forRoot(rotas);
 
 
+// teste
