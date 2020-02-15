@@ -1,5 +1,38 @@
-<form action="">
-    <cmail-form-field>
-    <input  class="mdl-textfield__input" placeholder=" ">
+<form  [formGroup]="formControl" (ngSubmit)="cadastrar()"> 
+
+<cmail-form-field [campo]="formControl.get('name')">
+    <input  
+        cmailInputField
+      formControlName = "name"  
+        name="nome" 
+        placeholder="Nome">
 </cmail-form-field>
+
+<cmail-form-field [campo]="formControl.get('username')">
+    <input  
+    cmailInputField
+    formControlName = "username"  
+    name="username" 
+    placeholder="Usuário">
+</cmail-form-field>
+
+<cmail-form-field [campo]="formControl.get('password')">
+    <input  
+    cmailInputField
+    formControlName = "password"  
+    name="password" 
+    placeholder="Senha">
+</cmail-form-field>
+
+<cmail-form-field [campo]="formControl.get('avatar')">
+    <input  
+    cmailInputField
+    formControlName = "avatar"  
+    name="avatar" 
+    placeholder="Avatar">
+</cmail-form-field>
+
+
+<button>Cadastrar</button>
+
 </form>
