@@ -1,4 +1,4 @@
-import { Component,Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -8,40 +8,30 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 
 export class CmailCadastroComponent {
-  
-  formControl = new FormGroup ({
-    name : new FormControl('', [Validators.required]),
-    username : new FormControl('', [Validators.required]),
-    password : new FormControl('', [Validators.required]),
-    avatar : new FormControl('', [Validators.required]),
+
+  formControl = new FormGroup({
+    name: new FormControl('', [Validators.required,Validators.minLength(4)]),
+    username: new FormControl('', [Validators.required]),
+    password: new FormControl('', [Validators.required]),
+    avatar: new FormControl('', [Validators.required]),
   })
 
-   
-constructor() {}
 
-cadastrar(FormControl) {
-  console.log(this.formControl.value);
-  console.log(FormControl);
+  constructor() {
 
-  if (FormControl = 'invalid') {
-
-    var message = "Favor Preencher Formulário!";
-    mensagem(message);
-      
-  } else {
-    console.log(FormControl);
   }
 
-}
+  cadastrar() {
+    console.log('Submit realizadp com sucesso!!');
+    console.log('valid?', this.formControl.get('name').valid);
 
-
-  
-}
-
-function mensagem(message) {
-  alert ("Favor Preencher Fomulário")
-}
-  
-
-
-
+    if (this.formControl.valid) {
+      console.log("Success");
+    } else {
+      Object.keys(this.formControl.controls).forEach((nomeDoCampo) => {
+        console.log(nomeDoCampo);
+        this.formControl.get(nomeDoCampo).markAllAsTouched();
+      })
+    }
+  }
+}  
