@@ -8,6 +8,7 @@ import { CmailCadastroComponent } from './modules/cadastro/cadastro.component';
 import { InboxComponent } from './modules/inbox/inbox.component';
 import { CmailInputFieldDirective } from './modules/cmail-input-field.directive';
 import { CmailFormGroup } from './component/cmail-form-group.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -17,16 +18,16 @@ import { CmailFormGroup } from './component/cmail-form-group.component';
     CmailCadastroComponent,
     InboxComponent,
     CmailFormGroup,
-    CmailInputFieldDirective
-
-        
+    CmailInputFieldDirective,
+    
 
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ModuloDeRotasConfiguradas,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,   
  
     
   ],
