@@ -35,6 +35,18 @@
 </cmail-form-field>
 
 
+<cmail-form-field [campo]="formControl.get('phone')">
+    <input  
+    cmailInputField
+    type="tel"
+    formControlName = "phone"  
+    name="phone" 
+    placeholder="Telefone">
+    <span class="mdl-textfield__error" *ngIf="formControl.get('phone').errors?.pattern">Informar telefone válido</span>
+</cmail-form-field>
+
+<br>
+
 <button>Cadastrar</button>
 
 

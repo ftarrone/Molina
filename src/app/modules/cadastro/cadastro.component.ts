@@ -14,6 +14,9 @@ export class CmailCadastroComponent {
     username: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required]),
     avatar: new FormControl('', [Validators.required]),
+    phone: new FormControl('', [
+      Validators.required,
+      Validators.pattern('[0-9]{4}-?[0-9]{4}[0-9]?')]),
   })
 
 
