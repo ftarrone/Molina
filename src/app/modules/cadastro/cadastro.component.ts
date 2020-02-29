@@ -19,10 +19,27 @@ export class CmailCadastroComponent {
    
 constructor() {}
 
-cadastrar() {
+cadastrar(FormControl) {
   console.log(this.formControl.value);
+  console.log(FormControl);
+
+  if (FormControl = 'invalid') {
+
+    var message = "Favor Preencher Formulário!";
+    mensagem(message);
+      
+  } else {
+    console.log(FormControl);
+  }
+
 }
 
+
+  
+}
+
+function mensagem(message) {
+  alert ("Favor Preencher Fomulário")
 }
   
 
