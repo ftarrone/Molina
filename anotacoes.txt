@@ -1,7 +1,0 @@
-##Desing
-https://material.angular.io/
-https://material.io/
-
-// git cmail-back
-
-https://github.com/caelum/cmail-back

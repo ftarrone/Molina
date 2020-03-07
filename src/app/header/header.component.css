@@ -1,11 +1,7 @@
-.headerSearch__input::placeholder {
-  color: #ffffff;
-}
-
 .headerGlobal__title {
   left: 175px;
  }
- 
+
  @media (max-width: 1024px) {
   .headerGlobal {
     display: flex;
@@ -16,21 +12,21 @@
     left: 0px;
   }
  }
- 
+
  .headerGlobal__logo {
   max-width: 60%;
  }
- 
+
  .headerGlobal__menuArea {
   border: 0;
  }
- 
+
  @media (min-width: 1025px) {
   .headerGlobal__menuArea {
     transform: translateX(0);
   }
  }
- 
+
  .headerGlobal__menuArea--active {
   transform: translateX(0);
  }
@@ -50,7 +46,7 @@
   opacity: 1;
   pointer-events: all;
  }
- 
+
  .headerGlobal__userInfo {
   background-color: #404040 !important;
   box-sizing: border-box;
@@ -69,8 +65,13 @@
   color: #ffffff;
   padding-top: 14px;
  }
- 
+
  .headerGlobal__userInfoDataName {
   font-size: 18px;
   margin: 0;
  }
+
+
+.headerSearch__input::placeholder {
+  color: #ffffff;
+}

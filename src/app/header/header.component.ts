@@ -1,4 +1,4 @@
-import { Component,Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'cmail-header',
@@ -6,14 +6,9 @@ import { Component,Input } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  @Input() title_header = '';
-  IsMenuOpen = false
+  @Input() titleHeader = '';
+  isMenuOpen = false;
   toggleMenu() {
-   this.IsMenuOpen = !this.IsMenuOpen
-      }
-   
+    this.isMenuOpen = !this.isMenuOpen;
   }
-  
-
-
-
+}

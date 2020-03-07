@@ -1,48 +1,42 @@
-import { Component, Input} from '@angular/core';
+import { Component } from '@angular/core';
 
-@Component ({
 
-    selector: 'cmail-inbox-page',
-    templateUrl: './inbox.component.html',
-    
+@Component({
+  selector: 'cmail-cadastro-page',
+  templateUrl: './inbox.component.html',
 })
+export class CmailInboxComponent {
+  emails = [
+    {
+      assunto: 'Email 01', conteudo: 'Alo alo w brazil', para: 'mario.souto@caelum.com.br',
+    },
+    {
+      assunto: 'Email 02',
+      conteudo: 'Alo alo w brazil',
+      para: 'mario.souto@caelum.com.br',
+    },
+  ];
 
-export class InboxComponent {
+  title = 'Caixa de entrada';
+  isNewEmailFormActive = false;
 
-    title = 'Caixa de Entrada';
-    IsNewEmailOpen = false
-  
-  
-  
-    emails = [
-     
-    ];
-  
-    novoEmail = {
-      assunto : '',
-      conteudo :'',
-      para:''
-    }
-  
-  
-    newEmail() {
-      this.IsNewEmailOpen = !this.IsNewEmailOpen
+  novoEmail = {
+    assunto: 'Mano olah que show!',
+    conteudo: 'Alo alo w brazil',
+    para: '',
   }
-  
-  hsndleSubmitOfNewEmail (formEmail){
-  
-    if (formEmail.invalid) {
-      return  false;
+
+  toggleNewEmailFormActive() {
+    this.isNewEmailFormActive = !this.isNewEmailFormActive;
+  }
+
+  handleSubmitOfNewEmail(formEmail) {
+    // Fail Fast Validations
+    if(formEmail.invalid) {
+      return false;
     }
-  
-  
+
     this.emails.push(this.novoEmail);
-    this.novoEmail = { 
-      assunto:  '',
-      conteudo:  '',
-      para:  ''
-    };
+    this.novoEmail = { assunto: '', conteudo: '', para: '' };
   }
-  
-  }
-  
+}
